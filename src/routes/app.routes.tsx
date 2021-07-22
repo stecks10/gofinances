@@ -11,12 +11,13 @@ const { Navigator, Screen } = createBottomTabNavigator();
 
 export function AppRoutes() {
   const theme = useTheme();
+
   return (
     <Navigator
       tabBarOptions={{
         activeTintColor: theme.colors.secondary,
         inactiveTintColor: theme.colors.text,
-        labelPosition: 'below-icon',
+        labelPosition: 'beside-icon',
         style: {
           paddingVertical: Platform.OS === 'ios' ? 20 : 0,
           height: 88,
