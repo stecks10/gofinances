@@ -1,7 +1,6 @@
 import React from 'react';
 import AppLoading from 'expo-app-loading';
 import { ThemeProvider } from 'styled-components';
-
 import {
   useFonts,
   Poppins_400Regular,
@@ -10,7 +9,8 @@ import {
 } from '@expo-google-fonts/poppins';
 
 import theme from './src/global/styles/theme';
-import { CategorySelect } from './src/screens/CategorySelect';
+
+import { Register } from './src/screens/Register';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -18,14 +18,13 @@ export default function App() {
     Poppins_500Medium,
     Poppins_700Bold,
   });
-
   if (!fontsLoaded) {
     return <AppLoading />;
   }
 
   return (
     <ThemeProvider theme={theme}>
-      <CategorySelect />
+      <Register />
     </ThemeProvider>
   );
 }
