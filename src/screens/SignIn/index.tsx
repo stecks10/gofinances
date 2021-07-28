@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 import AppleSvg from '../../assets/apple.svg';
@@ -17,7 +17,12 @@ import {
   FooterWrapper,
 } from './styles';
 
+import { AuthContext } from '../../Auth.Context';
+
 export function SignIn() {
+  const data = useContext(AuthContext);
+  console.log(data);
+
   return (
     <Container>
       <Header>
