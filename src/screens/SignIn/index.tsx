@@ -17,12 +17,11 @@ import {
   FooterWrapper,
 } from './styles';
 
-import { AuthContext } from '../../Auth.Context';
+import { useAuth } from '../../hooks/auth';
 
 export function SignIn() {
-  const data = useContext(AuthContext);
-  console.log(data);
-
+  const { user } = useAuth();
+  console.log(user.name);
   return (
     <Container>
       <Header>
